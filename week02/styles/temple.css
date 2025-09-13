@@ -8,7 +8,7 @@ body {
     font-family: Arial, sans-serif;
     line-height: 1.6;
 }
-header {
+header, footer {
     background-color: #333;
     color: #fff;
     padding: 10px;
@@ -19,6 +19,7 @@ main{
     width: 400px;
     margin: 0 auto;
 }
+
 h1 {margin: 10px;
 text-align: center;
 }
@@ -34,8 +35,8 @@ img {
 }
 
 section {
-    margin: 20px;
-    border: 1px solid rgb(0 0 /10%);
+    margin: 20px 0;
+    border: 1px solid rgb(0 0 0 /10%);
     padding: 10px;
     background-color: #abe;
     font-size: .9rem;
@@ -51,5 +52,4 @@ ul {
 
 footer {
     font-size: .9rem;
-
 }
