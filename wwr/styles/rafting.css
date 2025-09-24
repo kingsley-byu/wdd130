@@ -63,10 +63,13 @@ h1 {
 }
 
 article  {
-    position: relative;
+    position: absolute;
     margin: 0;
     background-color: var(--secondary-color);
     color: antiquewhite;
+    top: 180px;
+    opacity: 0.7;
+    width: 100%;
 
 }
 
@@ -84,5 +87,6 @@ h2 {
     background-color: var(--secondary-color);
     padding: 12px;
     border-radius: 10px;
+    width: 100%;
     
 }
