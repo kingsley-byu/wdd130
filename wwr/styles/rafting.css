@@ -9,7 +9,7 @@
 
 header {
     background-color: var(--primary-color);
-    color: var(--accent2-color);
+    color: white;
     display: grid;
     grid-template-columns: auto 1fr;
     align-items: center;
@@ -63,7 +63,6 @@ h1 {
     width: 100%;
     padding: 16px;
     text-align: center;
-    opacity: 0.7;
     background-color: var(--secondary-color);
     color: #fff;
 }
@@ -71,10 +70,10 @@ h1 {
 article  {
     position: absolute;
     margin: 0;
-    background-color: var(--secondary-color);
+    background-color: rgba(0,0,139,0.85);
     color: #fff;
     top: 180px;
-    opacity: 0.6;
+    opacity: 1;
     width: 100%;
     float: right;
 }
@@ -125,9 +124,9 @@ footer {
     display: grid;
     grid-template-columns: 1fr auto;
     align-items: center;
-    background-color: rgb(179, 134, 141);
+    background-color: rgb(179,134,141);
     padding: 0 1rem;
-    color: #fff;
+    color: #111;
     height: 65px;
     
       
