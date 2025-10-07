@@ -33,6 +33,7 @@ form {
     border-radius: 0.5rem;
     background-color: #eee;
     display: grid;
+    
 }
 
 fieldset {
@@ -41,6 +42,8 @@ fieldset {
     margin: 1rem;
     padding: 1rem;
     border: 1px solid rgb(0 0 0 /0.2);
+    gap: 0;
+    
 
 }
 
@@ -58,6 +61,7 @@ label {
 input, select, textarea {
     padding: 0.5rem;
     font-size: 1.1rem;
+    border-radius: 1rem;
 }
 input[type="checkbox"] {
     width: 22px;
