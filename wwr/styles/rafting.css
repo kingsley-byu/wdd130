@@ -159,17 +159,13 @@ section h2 {
 .contact-info {
     text-align: center;
     margin-top: 1rem;
-    color: #111;
-  
+    color: #111; 
 }
  
 
 .contact-grid {
     display: grid;
-    grid-template-columns: 1fr 1fr;
-    gap: 0.rem;
-    align-items: start;
-    margin: 2rem 0;
+    grid-template-columns: 1fr 1fr;   
 }
 
 
