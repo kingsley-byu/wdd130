@@ -39,7 +39,7 @@ h1, h2 {
     color: var(--primary-color);
 }
 
-nav, p, section, article {
+nav, p, section {
     margin: 16px;
     padding: 8px;
 }
@@ -102,7 +102,7 @@ footer p {
     font-size: 0.9rem;
 }
 
-footer .socialmedia {
+.socialmedia {
     display: flex;
     gap: 5px;
     justify-content: flex-end;
