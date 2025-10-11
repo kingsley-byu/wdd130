@@ -369,9 +369,11 @@ input[type="email"]
 }
 
 .cta-button {
-text-align: center;
-font-size: large;
-font-weight: bold;
+    display: flex;
+    justify-content: center;
+    font-size: large;
+    font-weight: bold;
+    margin-top: 1rem;
 }
 .community {
     text-align: center;
@@ -432,7 +434,7 @@ font-weight: bold;
 }
 
 .trip-table table {
-    width: 60%;
+    width: 100%;
     border-collapse: collapse;
     margin-top: 2rem;
     
