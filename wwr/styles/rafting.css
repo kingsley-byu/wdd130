@@ -105,7 +105,8 @@ nav li {
     margin: 0;
 }
 
-nav a { display: block;
+nav a { 
+    display: block;
     padding: 0.5rem 1.2rem;
     text-decoration: none;
     border-radius: 5px;

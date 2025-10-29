@@ -1,0 +1,272 @@
+<!DOCTYPE html>
+<!-- saved from url=(0079)https://byui-cse.github.io/cse110-ww-course/week06/prepare-2-data-in-files.html -->
+<html lang="en-us"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>CSE 110 | Learning Activities</title>
+  <link rel="apple-touch-icon" sizes="180x180" href="https://byui-cse.github.io/cse-ww-program/apple-touch-icon.png">
+  <link rel="icon" type="image/png" href="https://byui-cse.github.io/cse-ww-program/favicon-32x32.png">
+  <link rel="icon" type="image/png" href="https://byui-cse.github.io/cse-ww-program/favicon-16x16.png">
+  <link rel="preconnect" href="https://fonts.googleapis.com/">
+  <link rel="preconnect" href="https://fonts.gstatic.com/" crossorigin="">
+  <link href="./CSE 110 _ Learning Activities_files/css2" rel="stylesheet">
+  <link rel="stylesheet" href="./CSE 110 _ Learning Activities_files/course.css">
+  <link rel="stylesheet" href="./CSE 110 _ Learning Activities_files/default.min.css">
+
+  <script type="text/javascript" src="./CSE 110 _ Learning Activities_files/31fe1987e7484fa5_complete.js.download" crossorigin="anonymous"></script>
+</head>
+
+<body>
+  <header>
+    <div class="page">
+      <h1>CSE 110<span id="coursetitle">: Introduction to Programming</span></h1>
+      <img src="./CSE 110 _ Learning Activities_files/byui-logo.svg" alt="BYU-I logo" class="logo">
+    </div>
+  </header>
+  <main class="page">
+    <nav id="autogen-top-nav">
+      <!-- This nav is auto-generated -->
+      <span><a href="https://byui-cse.github.io/cse110-ww-course/index.html">Home</a></span>
+      <span><a href="https://byui-cse.github.io/cse110-ww-course/week01/index.html">W1</a></span>
+      <span><a href="https://byui-cse.github.io/cse110-ww-course/week02/index.html">W2</a></span>
+      <span><a href="https://byui-cse.github.io/cse110-ww-course/week03/index.html">W3</a></span>
+      <span><a href="https://byui-cse.github.io/cse110-ww-course/week04/index.html">W4</a></span>
+      <span><a href="https://byui-cse.github.io/cse110-ww-course/week05/index.html">W5</a></span>
+      <span class="active"><a href="https://byui-cse.github.io/cse110-ww-course/week06/index.html">W6</a></span>
+      <span><a href="https://byui-cse.github.io/cse110-ww-course/week07/index.html">W7</a></span>
+      <!-- end auto-generated -->
+    </nav>
+    <h2>W06 Learning Activity (2 of 2): Data in Files</h2>
+
+    <h3>Prepare</h3>
+    <h4>Overview</h4>
+    <p>In this lesson, you will continue applying all the topics of this semester as you work with data in files.</p>
+
+    <h4>Preparation Material</h4>
+    <p>For the most part, you know all the topics you need to complete this lesson. But, there is one additional
+      strategy that may be helpful.</p>
+
+    <h4>Finding the Max or Min</h4>
+    <p>Recall from previous lessons that a way to find the largest number in a list is to keep track of the largest
+      number found to date, and then update that value if you find a new one that is larger. For example:</p>
+
+    <pre><code class="python hljs language-python">
+numbers = [<span class="hljs-number">42</span>, <span class="hljs-number">25</span>, <span class="hljs-number">18</span>, <span class="hljs-number">83</span>, <span class="hljs-number">23</span>, <span class="hljs-number">85</span>, <span class="hljs-number">38</span>, <span class="hljs-number">2</span>]
+
+largest_so_far = numbers[<span class="hljs-number">0</span>]
+
+<span class="hljs-keyword">for</span> number <span class="hljs-keyword">in</span> numbers:
+    <span class="hljs-keyword">if</span> number &gt; largest_so_far:
+        <span class="hljs-comment"># This number is larger than the largest we had seen so far</span>
+
+        <span class="hljs-comment"># So it is now the largest we've seen</span>
+        largest_so_far = number
+
+<span class="hljs-comment"># Now, after the loop we can display it:</span>
+<span class="hljs-built_in">print</span>(<span class="hljs-string">f"The largest is: <span class="hljs-subst">{largest_so_far}</span>"</span>)
+</code></pre>
+
+    <p>This produces the following output:</p>
+
+    <pre><code class="plaintext hljs language-plaintext">
+The largest is: 85
+</code></pre>
+
+    <p>It is important to remember to start the <code>largest_so_far</code> variable at either the first value (assuming
+      it's not an empty list) or else something that you know will be smaller than everything in your list. Otherwise,
+      you won't consider some numbers. For example, if you started it at 10, then you would never consider anything less
+      than 10.</p>
+
+    <h4>Keeping track of the item that is the Max or Min</h4>
+    <p>What if you want to know not only which number is the largest, but also the item that is the largest? For
+      example, you may want to know not only the most expensive price in your shopping cart, but the actual product that
+      is the most expensive. The logic above will only find the largest value. To find the largest item, you'll also
+      need to keep track of its name or value along the way.</p>
+
+    <p>Consider the following list of products in a shopping cart, along with their prices:</p>
+
+    <pre><code class="python hljs language-python">
+shopping_cart = [
+    [<span class="hljs-string">"Chips"</span>, <span class="hljs-number">2.99</span>],
+    [<span class="hljs-string">"Bread"</span>, <span class="hljs-number">2.50</span>],
+    [<span class="hljs-string">"Milk"</span>, <span class="hljs-number">3.19</span>],
+    [<span class="hljs-string">"Ice Cream"</span>, <span class="hljs-number">6.99</span>],
+    [<span class="hljs-string">"Cheese"</span>, <span class="hljs-number">5.99</span>],
+    [<span class="hljs-string">"Candy bar"</span>, <span class="hljs-number">0.99</span>]
+]
+</code></pre>
+
+    <p>In order to find the most expensive price, we can iterate through it as before:</p>
+
+    <pre><code class="python hljs language-python">
+max_price = -<span class="hljs-number">1</span>
+
+<span class="hljs-keyword">for</span> item <span class="hljs-keyword">in</span> shopping_cart:
+    price = item[<span class="hljs-number">1</span>] <span class="hljs-comment"># The price is the second part of the item</span>
+
+    <span class="hljs-keyword">if</span> price &gt; max_price:
+        <span class="hljs-comment"># This is the new max</span>
+        max_price = price
+
+<span class="hljs-built_in">print</span>(<span class="hljs-string">f"The maximum price is: <span class="hljs-subst">{max_price}</span>"</span>)
+</code></pre>
+
+    <p>This produces the following output:</p>
+
+    <pre><code class="plaintext hljs language-plaintext">
+The maximum price is: 6.99
+</code></pre>
+
+    <p>If we want to find the name of the item that is the most expensive, we need to declare a variable (for example,
+      <code>max_product</code>) before the loop to keep track of the <em>product</em> that had the maximum price. Then,
+      whenever we update the max_price to save a new price, we also update the max_product to be the corresponding
+      product name. For example:</p>
+
+    <pre><code class="python hljs language-python">
+max_price = -<span class="hljs-number">1</span>
+max_product = <span class="hljs-string">""</span> <span class="hljs-comment"># It doesn't matter what you set this to, it just needs to be declared</span>
+
+<span class="hljs-keyword">for</span> item <span class="hljs-keyword">in</span> shopping_cart:
+    product_name = item[<span class="hljs-number">0</span>] <span class="hljs-comment"># Product name is the first part</span>
+    price = item[<span class="hljs-number">1</span>] 
+
+    <span class="hljs-keyword">if</span> price &gt; max_price:
+        <span class="hljs-comment"># This is the new max</span>
+        max_price = price
+
+        <span class="hljs-comment"># Also save this product name as the max product</span>
+        max_product = product_name
+
+<span class="hljs-built_in">print</span>(<span class="hljs-string">f"The maximum price is: <span class="hljs-subst">{max_price}</span>"</span>)
+<span class="hljs-built_in">print</span>(<span class="hljs-string">f"The product with the maximum price is: <span class="hljs-subst">{max_product}</span>"</span>)
+</code></pre>
+
+    <p>This produces the following output:</p>
+
+    <pre><code class="plaintext hljs language-plaintext">
+The maximum price is: 6.99
+The product with the maximum price is: Ice Cream
+</code></pre>
+
+
+    <h4>Other Code with Loops and Files</h4>
+    <p>In addition to the code samples you've seen here, keep in mind that you can use all of the other components you
+      have learned throughout the semester in conjunction with files. For example, if you wanted to restrict your
+      analysis of products to only those that had a price over a certain amount, or that had a name matching certain
+      criteria, you can include an if statement in the middle of the loop that is iterating through the file.</p>
+
+    <p>In many ways, this lesson is the culmination of all the building blocks that you've learned this semester and
+      brings them all together.</p>
+
+    <p>In this activity, you will continue practicing working with <code>if</code> statements, using even more
+      complicated programs and logic.</p>
+
+    <h3>Activity Instructions</h3>
+
+    <h4>Overview</h4>
+    <p>Practice finding elements in a list.</p>
+
+    <h4>Instructions</h4>
+    <p>To simplify your program to focus on the task at hand, instead of reading from a file, please copy and paste the
+      following list of people and their ages into your program:</p>
+
+    <pre><code class="python hljs language-python">
+people = [
+    <span class="hljs-string">"Stephanie 36"</span>,
+    <span class="hljs-string">"John 29"</span>,
+    <span class="hljs-string">"Emily 24"</span>,
+    <span class="hljs-string">"Gretchen 54"</span>,
+    <span class="hljs-string">"Noah 12"</span>,
+    <span class="hljs-string">"Penelope 32"</span>,
+    <span class="hljs-string">"Michael 2"</span>,
+    <span class="hljs-string">"Jacob 10"</span>
+]
+</code></pre>
+
+    <p>Write a program to find the youngest person in the list.</p>
+
+    <p>Consider following these steps to build up to the finished program:</p>
+
+    <ol>
+      <li>
+        <p>Iterate through the list and display each string to the screen.</p>
+      </li>
+      <li>
+        <p>Split the string into a name and age and print them to the screen.</p>
+      </li>
+      <li>
+        <p>Find the age that is the youngest.</p>
+      </li>
+      <li>
+        <p>Keep track of the name of the person that is the youngest.</p>
+      </li>
+    </ol>
+
+    <h4>Sample Solution</h4>
+    <p>When your program is finished, please view a sample solution of this program to compare your approach to that
+      one.</p>
+
+    <p>You should work to complete this checkpoint program first, without looking at the sample solution. However, if
+      you have worked on it for at least an hour and are still having problems, you may feel free to use the sample
+      solution to help you finish your program.</p>
+
+    <ul>
+      <li>
+        <p><a href="https://byui-cse.github.io/cse110-ww-course/week06/samples/prepare_people_sample_py.html" target="_blank">Sample solution</a></p>
+      </li>
+    </ul>
+
+    <h4>Testing Procedure</h4>
+    <p>Because there is no user input, you don't need to test the program with different values. Instead, make sure that
+      that following components are in place:</p>
+
+    <ol>
+      <li>
+        <p>The list of people is included in the program.</p>
+      </li>
+      <li>
+        <p>The program can iterate through each string in the list.</p>
+      </li>
+      <li>
+        <p>The program can split the string into the appropriate pieces.</p>
+      </li>
+      <li>
+        <p>The youngest age is identified.</p>
+      </li>
+      <li>
+        <p>The name of the youngest person is identified.</p>
+      </li>
+    </ol>
+
+
+    <h3>Submission</h3>
+    <p>You have now completed all of the learning activities for the week!</p>
+    <p>Make sure to:</p>
+    <ul>
+      <li><a href="https://byupw.instructure.com/calendar#view_name=agenda" target="_blank">Return to Canvas</a> and
+        submit the associated quiz.</li>
+    </ul>
+
+    <h3>Up Next</h3>
+    <ul>
+      <li>W06 Quiz: <a href="https://byui-cse.github.io/cse110-ww-course/week06/check-understanding.html">Files</a></li>
+    </ul>
+
+    <p>Other Links:</p>
+    <ul>
+      <li>Return to: <a href="https://byui-cse.github.io/cse110-ww-course/week06/index.html">Week Overview</a> | <a href="https://byui-cse.github.io/cse110-ww-course/index.html">Course Home</a></li>
+    </ul>
+
+
+
+  </main>
+
+  <footer>
+    <p>Copyright © Brigham Young University-Idaho | All rights reserved</p>
+  </footer>
+  <script src="./CSE 110 _ Learning Activities_files/highlight.min.js.download"></script>
+  <script>hljs.highlightAll();</script>
+
+
+
+</body></html>

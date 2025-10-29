@@ -1,0 +1,87 @@
+.payment-gateway-form {
+    background-color: blueviolet;
+    padding: 20px;
+    border-radius: 10px;
+    width: 650px;
+    margin: auto;
+
+}
+.payment-gateway-form h1 {
+    text-align: center;
+    color: yellow;
+    background-color: black;
+    
+}
+
+.payment-gateway-form h2 {
+    text-align: center;
+    color: yellow;
+
+}
+
+.form-container {
+    background-color: white;
+    padding: 20px;
+    display: flex;
+    justify-content: space-around;
+    margin: 10px 30px;
+    
+}
+
+.billing-address, .payment-details {
+    width: 40%;
+}
+
+input[type="text"], input[type="email"], select {
+    width: 90%;
+    padding: 10px;
+    margin-bottom: 10px;
+    border-radius: 0.3rem;
+
+
+}
+button {
+    background-color: blue;
+    color: white;
+    padding: 10px;
+    width: 100%;
+    border-radius: 0.3rem;
+    cursor: pointer;
+    font-size: large;
+
+
+}
+
+.zip-state, .exp-year-cvv {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    gap: 10px;
+    
+}
+
+
+button:hover {
+    background-color: green;
+}
+footer p {
+    text-align: center;
+    color: #ff0;
+    background-color: rgb(4, 155, 67);
+    border-radius: 0.5rem;
+    font-weight: bold;
+    padding: 10px;
+    margin-top: 2px;
+
+}
+
+footer {
+    width: 686px;
+    margin: auto;
+    
+
+}
+
+
+
+    

@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lan="en-US">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width initial-scale=1.0">
+    <meta name="description" content="Use our online payment platform for seemly and easy online payment">
+    <meta name="author" content="Osaruyi kingsley osawaru">
+    <title>Book and make your online payment on Kingspay</title>
+    <link rel="stylesheet" href="styles/payment.css">
+</head>
+
+
+
+<body>
+    <main>
+        <form>
+            <div class="payment-gateway-form">
+                <h1>Payment Gateway Form Design</h1>
+                <h2>HTML/CSS</h2>
+
+                <div class="form-container">
+                    <div class="billing-address">
+                        <h3>Billing Address</h3>
+                        <label for="name">Full Name</label>
+                        <input type="text" id="name" name="name" placeholder="Enter your Name">
+                        <label for="email">Email</label>
+                        <input type="email" id="email" name="email" placeholder="Enter your Email">
+                        <label for="address">Address</label>
+                        <input type="text" name="address" placeholder="Enter your Address">
+                        <label for="city">City</label>
+                        <input type="text" id="city" name="city" placeholder="Enter your City">
+                        <div class="zip-state">
+                            <label for="state">State</label>
+                            <select id="state" name="state">
+                                <option value="select">Select your State</option>
+                                <option value="lagos">Lagos</option>
+                                <option value="abuja">Abuja</option>
+                                <option value="rivers">Rivers</option>
+                                <option value="edo">Edo</option>
+                                <option value="kano">Kano</option>
+                            </select>
+                            <label for="zip">Zip code</label>
+                            <input type="text" id="zip" name="zip" placeholder="Zip code">
+                        </div>
+                    </div>
+
+                    <div class="payment-details">
+                        <h3>Payment details</h3>
+                        <label>Accepted Cards</label>
+                        <!--logos-->
+
+                        <label for="cardnumber">Card Number</label>
+                        <input type="text" id="cardnumber" name="card-number" placeholder="Enter your Card Number">
+                        <label for="expmonth">Exp Month</label>
+                        <input type="text" id="expmonth" name="exp-month" placeholder="Enter your Expiring Month">
+                        <div class="exp-year-cvv ">
+                            <label for="year">Exp year</label>
+                            <select id="year" name="year">
+                                <option value="2024">2024</option>
+                                <option value="2025">2025</option>
+                                <option value="2026">2026</option>
+                                <option value="2027">2027</option>
+                                <option value="2028">2028</option>
+                                <option value="2029">2029</option>
+                                <option value="2030">2030</option>
+                            </select>
+                            <label for="cvv">Cvv</label>
+                            <input type="text" id="cvv" name="cvv" placeholder="CVV">
+                        </div>
+                        <button type="submit">proceed to pay</button>
+                    </div>
+                </div>
+            </div>
+        </form>
+    </main>
+    <footer>
+        <p>&copy; 2025 Online payment form practice | All rights reserved. osaruyi kingsley osawaru </p>
+
+    </footer>
+
+
+
+</body>
+
+</html>
