@@ -23,13 +23,13 @@
                     <div class="billing-address">
                         <h3>Billing Address</h3>
                         <label for="name">Full Name</label>
-                        <input type="text" id="name" name="name" placeholder="Enter your Name">
+                        <input type="text" id="name" name="name" placeholder="Enter your Name" required>
                         <label for="email">Email</label>
-                        <input type="email" id="email" name="email" placeholder="Enter your Email">
+                        <input type="email" id="email" name="email" placeholder="Enter your Email" required>
                         <label for="address">Address</label>
-                        <input type="text" name="address" placeholder="Enter your Address">
+                        <input type="text" name="address" placeholder="Enter your Address" required>
                         <label for="city">City</label>
-                        <input type="text" id="city" name="city" placeholder="Enter your City">
+                        <input type="text" id="city" name="city" placeholder="Enter your City" required>
                         <div class="zip-state">
                             <label for="state">State</label>
                             <select id="state" name="state">
@@ -41,19 +41,22 @@
                                 <option value="kano">Kano</option>
                             </select>
                             <label for="zip">Zip code</label>
-                            <input type="text" id="zip" name="zip" placeholder="Zip code">
+                            <input type="text" id="zip" name="zip" placeholder="Zip code" required>
                         </div>
                     </div>
 
                     <div class="payment-details">
                         <h3>Payment details</h3>
                         <label>Accepted Cards</label>
+                        <img src="images/large-preview-11.jpg">
                         <!--logos-->
 
                         <label for="cardnumber">Card Number</label>
-                        <input type="text" id="cardnumber" name="card-number" placeholder="Enter your Card Number">
+                        <input type="text" id="cardnumber" name="card-number" placeholder="Enter your Card Number"
+                            required>
                         <label for="expmonth">Exp Month</label>
-                        <input type="text" id="expmonth" name="exp-month" placeholder="Enter your Expiring Month">
+                        <input type="text" id="expmonth" name="exp-month" placeholder="Enter your Expiring Month"
+                            required>
                         <div class="exp-year-cvv ">
                             <label for="year">Exp year</label>
                             <select id="year" name="year">
@@ -66,7 +69,7 @@
                                 <option value="2030">2030</option>
                             </select>
                             <label for="cvv">Cvv</label>
-                            <input type="text" id="cvv" name="cvv" placeholder="CVV">
+                            <input type="text" id="cvv" name="cvv" placeholder="CVV" required>
                         </div>
                         <button type="submit">proceed to pay</button>
                     </div>
